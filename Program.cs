@@ -25,11 +25,32 @@ namespace _17
                 switch(opcion)
                 {
                     case 1:  Console.WriteLine("1. Agregar ");
+                        Console.WriteLine("ingrese el ID: ");
+                        int Id = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Ingrese producto: ");
+                        string nombre = Console.ReadLine();
+                        inventario.Add(Id, nombre);
+                        
+                        break;
+                        case 2:   Console.WriteLine("2. Eliminar ");
 
+                        Console.WriteLine(" ingrese el codigo a Eliminar ");
+                        int cod = int.Parse(Console.ReadLine());
+                        if (inventario.Remove(cod))
+                        {
+                            Console.WriteLine("PROUCTO ELIMINADO CORRECTAMENTE");
+                        }
+                        else
+                        {
+                            Console.WriteLine(" no EXISTE el ID ingresado");
+                        }
                         break;
-                        case 2:
-                        break;
-                        case 3:
+                        case 3: Console.WriteLine("3. Mostrar ");
+                        
+                        foreach (var item in inventario)
+                        {
+                            Console.WriteLine(item.Key + item.Value);
+                        }
                         break;
                         case 4: Console.WriteLine(" SALIENDO...");
                         break;
