@@ -15,9 +15,27 @@ namespace _17
 
             do
             {
+                Console.WriteLine(" ****Menu**** ");
+                Console.WriteLine("1. Agregar ");
+                Console.WriteLine("2. Eliminar ");
+                Console.WriteLine("3. Mostrar ");
+                opcion = int.Parse(Console.ReadLine());
+                Console.Write(opcion);
 
+                switch(opcion)
+                {
+                    case 1:  Console.WriteLine("1. Agregar ");
 
-
+                        break;
+                        case 2:
+                        break;
+                        case 3:
+                        break;
+                        case 4: Console.WriteLine(" SALIENDO...");
+                        break;
+                        case 5: default:Console.WriteLine("opcion invalida");
+                        break;
+                }
 
             }while (opcion!=0);
 
